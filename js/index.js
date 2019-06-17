@@ -107,3 +107,5 @@ P[4].textContent = (siteContent["main-content"]["vision-content"]);
 P[5].innerHTML = (br.join(" Street<br> "));
 P[6].textContent = (siteContent["contact"]["phone"]);
 P[7].textContent = (siteContent["contact"]["email"]);
+P[8].textContent = (siteContent["footer"]["copyright"]);
+
