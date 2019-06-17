@@ -7,6 +7,7 @@ const siteContent = {
     "nav-item-5": "About",
     "nav-item-6": "Contact",
     "nav-item-7": "Help",
+    "nav-item-8": "Our Story",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -39,13 +40,26 @@ const siteContent = {
 };
 
 
-const navbar = document.querySelectorAll('a');
+let navbar = document.querySelectorAll('a');
 navbar[0].textContent = (siteContent["nav"]["nav-item-1"]);
 navbar[1].textContent = (siteContent["nav"]["nav-item-2"]);
 navbar[2].textContent = (siteContent["nav"]["nav-item-3"]);
 navbar[3].textContent = (siteContent["nav"]["nav-item-4"]);
 navbar[4].textContent = (siteContent["nav"]["nav-item-5"]);
 navbar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+
+let nav = document.querySelector('nav');
+
+let newNav1 = document.createElement('a');
+newNav1.textContent = (siteContent["nav"]["nav-item-7"]);
+newNav1.style.color = 'green';
+
+let newNav2 = document.createElement('a');
+newNav2.textContent = (siteContent["nav"]["nav-item-8"]);
+newNav2.style.color = 'green';
+
+nav.appendChild(newNav1);
+nav.prepend(newNav2);
 
 navbar.forEach( function(currentvalue){
   currentvalue.style.color = 'green';
@@ -62,7 +76,11 @@ let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let H1 = document.querySelector('h1');
-H1.textContent = (siteContent["cta"]["h1"])
+var str = (siteContent["cta"]["h1"]);
+var breaks = [];
+var breaks = str.split(" ");
+H1.innerHTML = (breaks.join(" <br> "));
+
 
 let btn = document.querySelector('button');
 btn.textContent = (siteContent["cta"]["button"])
