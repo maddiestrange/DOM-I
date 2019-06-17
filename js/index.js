@@ -6,6 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Help",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -37,16 +38,18 @@ const siteContent = {
   },
 };
 
-let title = document.querySelector('title');
-title.textContent = 'Great Idea!';
 
-let navbar = document.querySelectorAll('a');
+const navbar = document.querySelectorAll('a');
 navbar[0].textContent = (siteContent["nav"]["nav-item-1"]);
 navbar[1].textContent = (siteContent["nav"]["nav-item-2"]);
 navbar[2].textContent = (siteContent["nav"]["nav-item-3"]);
 navbar[3].textContent = (siteContent["nav"]["nav-item-4"]);
 navbar[4].textContent = (siteContent["nav"]["nav-item-5"]);
 navbar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+
+navbar.forEach( function(currentvalue){
+  currentvalue.style.color = 'green';
+});
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
