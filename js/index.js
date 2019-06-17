@@ -79,7 +79,7 @@ let H1 = document.querySelector('h1');
 var str = (siteContent["cta"]["h1"]);
 var breaks = [];
 var breaks = str.split(" ");
-H1.innerHTML = (breaks.join(" <br> "));
+H1.innerHTML = (breaks.join("<br>"));
 
 
 let btn = document.querySelector('button');
@@ -93,12 +93,17 @@ H4[3].textContent = (siteContent["main-content"]["product-h4"]);
 H4[4].textContent = (siteContent["main-content"]["vision-h4"]);
 H4[5].textContent = (siteContent["contact"]["contact-h4"]);
 
+var str = (siteContent["contact"]["address"]);
+var br = [];
+var br = str.split("Street");
+
+
 let P = document.querySelectorAll('p');
 P[0].textContent = (siteContent["main-content"]["features-content"]);
 P[1].textContent = (siteContent["main-content"]["about-content"]);
 P[2].textContent = (siteContent["main-content"]["services-content"]);
 P[3].textContent = (siteContent["main-content"]["product-content"]);
 P[4].textContent = (siteContent["main-content"]["vision-content"]);
-P[5].textContent = (siteContent["contact"]["address"]);
+P[5].innerHTML = (br.join(" Street<br> "));
 P[6].textContent = (siteContent["contact"]["phone"]);
 P[7].textContent = (siteContent["contact"]["email"]);
