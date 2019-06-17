@@ -37,6 +37,17 @@ const siteContent = {
   },
 };
 
+let title = document.querySelector('title');
+title.textContent = 'Great Idea!';
+
+let navbar = document.querySelectorAll('a');
+navbar[0].textContent = (siteContent["nav"]["nav-item-1"]);
+navbar[1].textContent = (siteContent["nav"]["nav-item-2"]);
+navbar[2].textContent = (siteContent["nav"]["nav-item-3"]);
+navbar[3].textContent = (siteContent["nav"]["nav-item-4"]);
+navbar[4].textContent = (siteContent["nav"]["nav-item-5"]);
+navbar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -47,13 +58,26 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-let title = document.getElementsByTagName('title');
-title.textContent = 'Great Idea!';
+let H1 = document.querySelector('h1');
+H1.textContent = (siteContent["cta"]["h1"])
 
-let navbar = document.querySelectorAll('a');
-navbar[0].textContent = (siteContent["nav"]["nav-item-1"]);
-navbar[1].textContent = (siteContent["nav"]["nav-item-2"]);
-navbar[2].textContent = (siteContent["nav"]["nav-item-3"]);
-navbar[3].textContent = (siteContent["nav"]["nav-item-4"]);
-navbar[4].textContent = (siteContent["nav"]["nav-item-5"]);
-navbar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+let btn = document.querySelector('button');
+btn.textContent = (siteContent["cta"]["button"])
+
+let H4 = document.querySelectorAll('h4');
+H4[0].textContent = (siteContent["main-content"]["features-h4"]);
+H4[1].textContent = (siteContent["main-content"]["about-h4"]);
+H4[2].textContent = (siteContent["main-content"]["services-h4"]);
+H4[3].textContent = (siteContent["main-content"]["product-h4"]);
+H4[4].textContent = (siteContent["main-content"]["vision-h4"]);
+H4[5].textContent = (siteContent["contact"]["contact-h4"]);
+
+let P = document.querySelectorAll('p');
+P[0].textContent = (siteContent["main-content"]["features-content"]);
+P[1].textContent = (siteContent["main-content"]["about-content"]);
+P[2].textContent = (siteContent["main-content"]["services-content"]);
+P[3].textContent = (siteContent["main-content"]["product-content"]);
+P[4].textContent = (siteContent["main-content"]["vision-content"]);
+P[5].textContent = (siteContent["contact"]["address"]);
+P[6].textContent = (siteContent["contact"]["phone"]);
+P[7].textContent = (siteContent["contact"]["email"]);
