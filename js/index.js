@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Help",
+    "nav-item-8": "Our Story",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -37,6 +39,73 @@ const siteContent = {
   },
 };
 
+
+let navbar = document.querySelectorAll('a');
+navbar[0].textContent = (siteContent["nav"]["nav-item-1"]);
+navbar[1].textContent = (siteContent["nav"]["nav-item-2"]);
+navbar[2].textContent = (siteContent["nav"]["nav-item-3"]);
+navbar[3].textContent = (siteContent["nav"]["nav-item-4"]);
+navbar[4].textContent = (siteContent["nav"]["nav-item-5"]);
+navbar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+
+let nav = document.querySelector('nav');
+
+let newNav1 = document.createElement('a');
+newNav1.textContent = (siteContent["nav"]["nav-item-7"]);
+newNav1.style.color = 'green';
+
+let newNav2 = document.createElement('a');
+newNav2.textContent = (siteContent["nav"]["nav-item-8"]);
+newNav2.style.color = 'green';
+
+nav.appendChild(newNav1);
+nav.prepend(newNav2);
+
+navbar.forEach( function(currentvalue){
+  currentvalue.style.color = 'green';
+});
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let H1 = document.querySelector('h1');
+var str = (siteContent["cta"]["h1"]);
+var breaks = [];
+var breaks = str.split(" ");
+H1.innerHTML = (breaks.join("<br>"));
+
+
+let btn = document.querySelector('button');
+btn.textContent = (siteContent["cta"]["button"])
+
+let H4 = document.querySelectorAll('h4');
+H4[0].textContent = (siteContent["main-content"]["features-h4"]);
+H4[1].textContent = (siteContent["main-content"]["about-h4"]);
+H4[2].textContent = (siteContent["main-content"]["services-h4"]);
+H4[3].textContent = (siteContent["main-content"]["product-h4"]);
+H4[4].textContent = (siteContent["main-content"]["vision-h4"]);
+H4[5].textContent = (siteContent["contact"]["contact-h4"]);
+
+var str = (siteContent["contact"]["address"]);
+var br = [];
+var br = str.split("Street");
+
+
+let P = document.querySelectorAll('p');
+P[0].textContent = (siteContent["main-content"]["features-content"]);
+P[1].textContent = (siteContent["main-content"]["about-content"]);
+P[2].textContent = (siteContent["main-content"]["services-content"]);
+P[3].textContent = (siteContent["main-content"]["product-content"]);
+P[4].textContent = (siteContent["main-content"]["vision-content"]);
+P[5].innerHTML = (br.join(" Street<br> "));
+P[6].textContent = (siteContent["contact"]["phone"]);
+P[7].textContent = (siteContent["contact"]["email"]);
+P[8].textContent = (siteContent["footer"]["copyright"]);
+
